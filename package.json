@@ -1,6 +1,6 @@
 {
   "name": "alcorithm",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Calculate the ABV % of a mixed drink",
   "main": "index.js",
   "scripts": {
