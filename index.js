@@ -3,7 +3,7 @@ function addIngredient (ingredient) {
         throw 'Ingredient should have an abv and volume';
     }
 
-    return (ingredient.abv / 100) * ingredient.volume;
+    return ingredient.abv * ingredient.volume;
 }
 
 function withVolume (volume, ingredients) {
@@ -13,7 +13,7 @@ function withVolume (volume, ingredients) {
         totalAbv += addIngredient(ingredient);
     });
 
-    return totalAbv / volume * 100;
+    return totalAbv / volume;
 }
 
 function withoutVolume (ingredients) {
@@ -25,7 +25,7 @@ function withoutVolume (ingredients) {
         totalVolume += ingredient.volume;
     });
 
-    return totalAbv / totalVolume * 100;
+    return totalAbv / totalVolume;
 }
 
 module.exports = {
